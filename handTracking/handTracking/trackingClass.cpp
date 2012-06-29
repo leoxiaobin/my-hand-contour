@@ -590,6 +590,7 @@ void Tracking::calResult(double* est_data, const Point2d* p_points, Point* p_out
 
 void Tracking::drawResult(Mat& image, int method)
 {
+	m_status = Fail;
 	if (m_status != Fail)
 	{
 		const Point* pts[] = {m_curr_result.points};
